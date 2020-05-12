@@ -1,0 +1,17 @@
+.wrap {
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 10px;
+  padding-top: 10px;
+}
+
+.title {
+  margin-bottom: 10px;
+  display: inline-block;
+  font-style: normal;
+}
+
+.nav {
+  float: right;
+  margin: 0 10px;
+}

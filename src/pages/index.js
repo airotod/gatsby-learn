@@ -1,22 +1,26 @@
 import React from "react"
 import { Link } from "gatsby"
-import Container from "../components/container";
-import Footer from '../components/footer'
+import Layout from "../components/layout"
 
 export default function Home() {
   return (
-    <Container >
+    <Layout>
       <h1>Home</h1>
-      <p>Hello, this is a home page. Click the navigation tab you want to browse.</p>
+      <p>
+        Hello, this is a home page. <br />
+        Click the keyword you want to browse.
+      </p>
       <ul>
         <li>
-          <Link to="/contact/">Contact</Link>
+          <Link to="/picture/">Picture</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/book/">Book</Link>
+        </li>
+        <li>
+          <Link to="/music/">Music</Link>
         </li>
       </ul>
-      <Footer />
-    </Container>
+    </Layout>
   )
 }

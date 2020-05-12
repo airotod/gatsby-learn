@@ -1,3 +1,21 @@
 html {
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(245, 245, 245);
+  font-size: 20px;
+  line-height: 1.45;
+  font-family: 'Quattrocento Sans', sans-serif;
+  padding: 60px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #1c86a0;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
 }

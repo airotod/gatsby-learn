@@ -1,0 +1,8 @@
+.footer {
+  display: inline-block;
+}
+
+.files {
+  float: right;
+  margin: 0 10px;
+}
