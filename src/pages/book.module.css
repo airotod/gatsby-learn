@@ -1,0 +1,9 @@
+.content {
+  border: 1px solid #c9c9c9;
+  padding: 0 20px;
+  margin: 10px 0;
+}
+
+.content a {
+    color: #444444;
+}

@@ -1,9 +1,9 @@
 html {
-  background-color: rgb(245, 245, 245);
+  background-color: #efefef;
   font-size: 20px;
   line-height: 1.45;
   font-family: 'Quattrocento Sans', sans-serif;
-  padding: 60px;
+  padding: 0 0;
 }
 
 h1, h2, h3, h4, h5, h6 {

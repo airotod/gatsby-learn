@@ -1,17 +1,43 @@
 .wrap {
-  margin: 0 auto;
-  max-width: 700px;
-  padding: 10px;
-  padding-top: 10px;
+  margin: 0;
+  padding: 0;
 }
 
-.title {
-  margin-bottom: 10px;
-  display: inline-block;
-  font-style: normal;
+.header {
+  position: fixed;
+  float: left;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+  height: 80px;
+  background-color: #efefef;
+  border-bottom: 1px solid #ddd;
+}
+
+.header_left {
+  float: left;
+  margin: 0 10px;
+}
+
+.header_right {
+  float: right;
+  margin: 0 10px;
 }
 
 .nav {
-  float: right;
+  list-style: none;
+}
+
+.tab {
   margin: 0 10px;
+  padding: 2px 4px;
+  border: 1px solid #bbbbbb;
+  border-radius: 16px;
+  float: right;
+  font-size: 14px;
+}
+
+.main_wrap {
+  padding: 80px 100px;
+  min-height: 100vh;
 }

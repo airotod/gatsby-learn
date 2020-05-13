@@ -1,8 +1,18 @@
 .footer {
-  display: inline-block;
+  float: left;
+  width: 100%;
+  bottom: 0;
+  height: 80px;
+  background-color: #cdcdcd;
 }
 
-.files {
+.footer_left {
+  float: left;
+  margin: 0 30px;
+}
+
+.footer_right {
   float: right;
-  margin: 0 10px;
+  margin: 10px 30px;
+  font-size: 14px;
 }
