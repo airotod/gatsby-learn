@@ -1,26 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
+import styles from "./index.module.css"
 
 export default function Home() {
   return (
     <Layout>
-      <h1>Home</h1>
-      <p>
-        Hello, this is a home page. <br />
-        Click the keyword you want to browse.
-      </p>
-      <ul>
-        <li>
-          <Link to="/picture/">Picture</Link>
-        </li>
-        <li>
-          <Link to="/book/">Book</Link>
-        </li>
-        <li>
-          <Link to="/music/">Music</Link>
-        </li>
-      </ul>
+      <div className={styles.body}>
+        <div className={styles.wrap_body}>
+          <h1>Home</h1>
+          <p>Hello, this is a home page.</p>
+        </div>
+      </div>
     </Layout>
   )
 }

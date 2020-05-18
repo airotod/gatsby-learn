@@ -1,21 +1,13 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 html {
-  background-color: #efefef;
-  font-size: 20px;
-  line-height: 1.45;
-  font-family: 'Quattrocento Sans', sans-serif;
-  padding: 0 0;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-a {
-  color: #1c86a0;
-  text-decoration: none;
-}
-
-a:hover, a:active {
-  text-decoration: underline;
+body {
+  font-size: 14px;
+  line-height: 1.5;
 }
