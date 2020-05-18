@@ -8,7 +8,34 @@
   width: 100%;
 }
 .wrap_body {
-  padding: 80px 150px 0;
+  padding: 80px 150px 160px;
+}
+.title:any-link {
+  color: #282828;
+  text-decoration: none;
+}
+h1 {
+  margin: 10px 0;
+  padding: 20px 0;
+}
+.introduce {
+  margin: 10px 0;
+  padding: 10px 0;
+}
+.nav {
+  margin: 10px 0;
+  padding: 20px 0;
+}
+.nav li {
+  margin: 0 30px;
+}
+.nav_item {
+  text-decoration: none;
+  color: #444444;
+}
+.nav_item:hover,
+.nav_item:active {
+  color: #aaaaaa;
 }
 
 @media (max-width: 750px) {
@@ -16,6 +43,6 @@
     font-size: 16px;
   }
   .wrap_body {
-    padding: 0 10px;
+    padding: 0 10px 80px;
   }
 }

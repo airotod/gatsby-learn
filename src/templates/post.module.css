@@ -1,0 +1,25 @@
+.body {
+  font-family: "Merriweather", sans-serif;
+  font-size: 23px;
+  line-height: 1.91;
+  color: #282828;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.wrap_body {
+  padding: 80px 150px 120px;
+}
+.back {
+  text-align: right;
+  padding: 15px 30px;
+}
+
+@media (max-width: 750px) {
+  .body {
+    font-size: 16px;
+  }
+  .wrap_body {
+    padding: 0 10px 60px;
+  }
+}
