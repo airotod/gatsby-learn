@@ -21,6 +21,10 @@ export default function Home() {
               <h3><Link className={styles.nav_item} to="/music/">Music</Link></h3>
               <p>There are many songs I like.</p>
             </li>
+            <li>
+              <h3><Link className={styles.nav_item} to="/book/">Book</Link></h3>
+              <p>There are many books I like.</p>
+            </li>
           </ul>
         </div>
       </div>

@@ -5,6 +5,8 @@ import styles from "./post.module.css"
 
 export default function Post({ data }) {
   const post = data.markdownRemark
+  const slug = post.fields.slug
+  const to = '/' + slug.split('/')[1] + '/'
   return (
     <Layout>
       <div className={styles.body}>
@@ -12,7 +14,7 @@ export default function Post({ data }) {
           <h1>{post.frontmatter.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
           <div className={styles.back}>
-            <Link to="/music/">back</Link>
+            <Link to={to}>back</Link>
           </div>
         </div>
       </div>
@@ -26,6 +28,9 @@ export const query = graphql`
       html
       frontmatter {
         title
+      }
+      fields {
+        slug
       }
     }
   }
