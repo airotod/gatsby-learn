@@ -6,6 +6,8 @@
   color: #8f8f8f;
   font-family: "Roboto", sans-serif;
   font-size: 15px;
+  position: absolute;
+  bottom: 0;
 }
 .inner_foot {
   padding: 10px;
@@ -13,14 +15,14 @@
 }
 .wrap_info {
   margin: 30px auto;
-  width: 70%;
+  max-width: 800px;
 }
 .f_r {
   float: right;
   list-style: none;
 }
 .f_r li {
-  display: inline-block;
+  float: left;
   margin: 0 30px;
 }
 .f_r li a {
@@ -39,6 +41,9 @@
   .wrap_info {
     margin: 0 auto 10px;
     width: 100%;
+  }
+  .f_r {
+    float: none;
   }
   .inner_foot {
     padding: 10px;
