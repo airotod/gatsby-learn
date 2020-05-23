@@ -15,7 +15,7 @@
 }
 .wrap_info {
   margin: 30px auto;
-  max-width: 800px;
+  width: 80%;
 }
 .f_r {
   float: right;
