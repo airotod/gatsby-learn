@@ -1,11 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import styles from "./index.module.css"
 
 export default function Home() {
   return (
     <Layout>
+      <SEO title="airotod's blog" />
       <div className={styles.body}>
         <div className={styles.wrap_body}>
         <Link className={styles.title} to="/">

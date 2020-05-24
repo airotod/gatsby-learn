@@ -2,6 +2,10 @@ module.exports = {
   pathPrefix: `/gatsby-learn`,
   siteMetadata: {
     title: `My blog`,
+    description: `It is a website for recording what I like.`,
+    author: `airotod`,
+    siteUrl: `https://airotod.github.io/gatsby-learn`,
+    image: `/eyes.jpeg`,
   },
   plugins: [
     {
@@ -36,5 +40,6 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-react-helmet`,
   ],
 }
