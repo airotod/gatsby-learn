@@ -5,7 +5,7 @@ module.exports = {
     description: `It is a website for recording what I like.`,
     author: `airotod`,
     siteUrl: `https://airotod.github.io/gatsby-learn`,
-    image: `/eyes.jpg`,
+    image: `/eyes.JPG`,
   },
   plugins: [
     {
