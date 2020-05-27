@@ -3,6 +3,8 @@ title: "The writer's secret life"
 date: "2019-04-02"
 ---
 
+<img width="200" height="300" src="https://www.guillaumemusso.com/sites/default/files/images/livres/couv/9782702165485-001-T.jpeg" alt="image">
+
 \[Guillaume Musso - The writer's secret life]
 
 “Everyone has three lives: a public life,
@@ -14,4 +16,3 @@ In 1999, after publishing three cult novels, famous author Nathan Fawles announc
 
 An unforgettable read, and a fascinating literary puzzle, revealing itself to be diabolical when the author sets the last piece in place.
 
-<img width="200" height="300" src="https://www.guillaumemusso.com/sites/default/files/images/livres/couv/9782702165485-001-T.jpeg" alt="image"></iframe>

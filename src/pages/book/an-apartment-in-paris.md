@@ -3,6 +3,8 @@ title: "An apartment in Paris"
 date: "2017-12-30"
 ---
 
+<img width="200" height="300" src="https://www.guillaumemusso.com/sites/default/files/images/livres/musso_un_appartement_a_paris-705x1024.jpg" alt="image">
+
 \[Guillaume Musso - An apartment in Paris]
 
 “Art is a lie that tells the truth…”
@@ -16,5 +18,3 @@ The workshop was once owned by the famous painter Sean Lorenz and still exudes h
 But to uncover the real secret of Sean Lorenz, they will first have to face their own demons in a tragic investigation that will change them forever.
 
 Guillaume Musso has written an addictive and captivating thriller carried by profoundly human characters. A vertiginous jump into the mysterious world of creation.
-
-<img width="200" height="300" src="https://www.guillaumemusso.com/sites/default/files/images/livres/musso_un_appartement_a_paris-705x1024.jpg" alt="image"></iframe>
