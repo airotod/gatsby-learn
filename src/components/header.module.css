@@ -5,7 +5,6 @@
   background-color: #ffffff;
   color: #343434;
   font-family: "DM Serif Display";
-  display: sticky;
 }
 .inner_head {
   padding: 10px 15px;
@@ -15,7 +14,7 @@
   font-size: 27px;
   font-weight: normal;
   margin: 10px 0;
-  height: 50px;
+  height: 30px;
 }
 .wrap_head a {
   text-decoration: none;
