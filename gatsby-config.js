@@ -40,42 +40,6 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: "gatsby-plugin-paginated-collection",
-      options: {
-        name: "books",
-        pageSize: 5,
-        firstPageSize: 5,
-        query: `
-          {
-            allMarkdownRemark {
-              filter: { fields: { slug: { regex: "/book/" } } }
-              sort: { fields: [frontmatter___date], order: DESC }
-              ) {
-              nodes {
-                id
-                excerpt
-                frontmatter {
-                  title
-                  date
-                }
-                fields {
-                  slug
-                }
-              }
-            }
-          }
-        `,
-        normalizer: ({ data }) =>
-          data.allMarkdownRemark.nodes.map(node => ({
-            id: node.id,
-            url: node.fields.slug,
-            title: node.frontmatter.title,
-            excerpt: node.excerpt,
-            date: node.frontmatter.date,
-          })),
-      },
-    },
     `gatsby-plugin-react-helmet`,
   ],
 }

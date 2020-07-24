@@ -1,30 +1,11 @@
-import React, { useState, useCallback } from "react"
-import { Link, graphql, withPrefix } from "gatsby"
+import React from "react"
+import { Link, graphql } from "gatsby"
 import { FacebookShareButton, TwitterShareButton } from "react-share"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styles from "./book.module.css"
 
-export default function Book({ data }) {
-  const initialPage = data.paginatedCollectionPage
-  const [latestPage, setLatestPage] = useState(initialPage)
-  const [blogPosts, setBlogPosts] = useState(initialPage.nodes)
-
-  const loadNextPage = useCallback(async () => {
-    if (!latestPage.hasNextPage) return
-
-    const collectionId = initialPage.collection.id
-    const nextPageId = latestPage.nextPage.id
-    const path = withPrefix(
-      `/paginated-data/${collectionId}/${nextPageId}.json`
-    )
-    const res = await fetch(path)
-    const json = await res.json()
-
-    setBlogPosts(state => [...state, ...json.nodes])
-    setLatestPage(json)
-  }, [initialPage, latestPage])
-
+export default function Music({ data }) {
   return (
     <Layout>
       <SEO title="airotod's blog - book" />
@@ -36,27 +17,27 @@ export default function Book({ data }) {
           <div className={styles.post_num}>
             {data.allMarkdownRemark.totalCount} Posts
           </div>
-          {blogPosts.map(blogPost => (
-            <div key={blogPost.id} className={styles.wrap_item}>
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <div key={node.id} className={styles.wrap_item}>
               <div className={styles.contents}>
-                <Link className={styles.link_item} to={blogPost.url}>
-                  <h3>{blogPost.title}</h3>
-                  <p className={styles.date}>{blogPost.date}</p>
-                  <p className={styles.content}>{blogPost.excerpt}</p>
+                <Link className={styles.link_item} to={node.fields.slug}>
+                  <h3>{node.frontmatter.title}</h3>
+                  <p className={styles.date}>{node.frontmatter.date}</p>
+                  <p className={styles.content}>{node.excerpt}</p>
                 </Link>
               </div>
               <div className={styles.share_icons}>
                 <TwitterShareButton
-                  url={`${data.site.siteMetadata.siteUrl}${blogPost.url}`}
-                  title={`${blogPost.excerpt} - ${blogPost.date}`}
+                  url={`${data.site.siteMetadata.siteUrl}${node.fields.slug}`}
+                  title={`${node.excerpt} - ${node.frontmatter.date}`}
                 >
                   <span className={styles.share_icon}>
                     <img src="/twitter-black.svg" alt="twitter" />
                   </span>
                 </TwitterShareButton>
                 <FacebookShareButton
-                  url={`${data.site.siteMetadata.siteUrl}${blogPost.slug}`}
-                  quote={`${blogPost.excerpt} - ${blogPost.date}`}
+                  url={`${data.site.siteMetadata.siteUrl}${node.fields.slug}`}
+                  quote={`${node.excerpt} - ${node.frontmatter.date}`}
                 >
                   <span className={styles.share_icon}>
                     <img src="/facebook-black.svg" alt="facebook" />
@@ -65,11 +46,6 @@ export default function Book({ data }) {
               </div>
             </div>
           ))}
-          {latestPage.hasNextPage && (
-            <button className={styles.loadmore_btn} onClick={loadNextPage}>
-              <span>See more quotes</span>
-            </button>
-          )}
         </div>
       </div>
     </Layout>
@@ -100,19 +76,6 @@ export const query = graphql`
           }
           excerpt
         }
-      }
-    }
-    paginatedCollectionPage(
-      collection: { name: { eq: "books" } }
-      index: { eq: 0 }
-    ) {
-      nodes
-      hasNextPage
-      nextPage {
-        id
-      }
-      collection {
-        id
       }
     }
   }
