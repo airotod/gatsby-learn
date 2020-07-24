@@ -1,3 +1,4 @@
+const fs = require(`fs`)
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
@@ -26,16 +27,32 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      paginatedCollection(name: { eq: "books" }) {
+        id
+        pages {
+          id
+          nodes
+          hasNextPage
+          nextPage {
+            id
+          }
+        }
+      }
     }
   `)
+
+  const collection = result.data.paginatedCollection
+  const dir = path.join(__dirname, "public", "paginated-data", collection.id)
+  fs.mkdirSync(dir, { recursive: true })
+
+  for (const page of collection.pages)
+    fs.writeFileSync(path.resolve(dir, `${page.id}.json`), JSON.stringify(page))
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
       component: path.resolve(`./src/templates/post.js`),
       context: {
-        // Data passed to context is available
-        // in page queries as GraphQL variables.
         slug: node.fields.slug,
       },
     })
